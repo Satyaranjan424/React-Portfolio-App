@@ -7,21 +7,21 @@ export default function Projects() {
       title: "Property Management System",
       desc: "A full-stack platform to manage properties, tenants, and payments with a scalable backend and responsive frontend.",
       tech: ["React", "Node.js", "Express", "PostgreSQL"],
-      github: "#",
+      github: "https://github.com/Satyaranjan424",
       live: "#",
     },
     {
       title: "Restaurant Management System",
       desc: "A modern system for handling orders, menus, and customer interactions with real-time updates and optimized performance.",
       tech: ["React", "Node.js", "MongoDB"],
-      github: "#",
+      github: "https://github.com/Satyaranjan424",
       live: "#",
     },
     {
       title: "Job Board Application",
       desc: "A dynamic job portal where users can browse, filter, and apply for jobs with an intuitive UI and efficient backend.",
       tech: ["React", "Redux", "REST API"],
-      github: "#",
+      github: "https://github.com/Satyaranjan424",
       live: "#",
     },
   ];
@@ -106,7 +106,7 @@ export default function Projects() {
       {/* 🔻 Bottom CTA */}
       <div className="mt-20 text-center relative z-10">
         <a
-          href="#"
+          href="https://github.com/Satyaranjan424"
           className="px-8 py-3 text-xs tracking-[0.3em] uppercase text-[#c5a161] border border-[#c5a161]/30 rounded-xl hover:bg-[#c5a161]/10 transition"
         >
           View More Projects

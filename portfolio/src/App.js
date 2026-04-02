@@ -3,7 +3,7 @@ import IntroGate from "./components/IntroGate";
 import Navbar from "./components/Navbar";
 import Hero3D from "./components/Hero3D";
 import Scene3D from "./components/Scene3D";
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import GithubStats from "./components/GithubStats";
@@ -28,7 +28,7 @@ export default function App() {
           <Navbar />
           <Hero3D />
           <Scene3D />
-          <Skills />
+          {/* <Skills /> */}
           <WhyHireMe />
           <Projects />
           <Experience/>

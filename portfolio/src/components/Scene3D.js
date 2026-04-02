@@ -3,8 +3,9 @@
 import { memo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Text, Float, OrbitControls, Stars } from "@react-three/drei";
+import { motion } from "framer-motion";
 
-/* 🎯 Tech Stack (memoized to prevent re-renders) */
+/* 🎯 Tech Stack */
 const TechStack = memo(function TechStack() {
   return (
     <>
@@ -42,7 +43,7 @@ const TechStack = memo(function TechStack() {
 
       <Float speed={2}>
         <Text position={[3, -1.5, 0]} fontSize={0.4} color="#e8dcc8">
-          MongoDB
+          PostgreSQL
         </Text>
       </Float>
 
@@ -64,6 +65,21 @@ const TechStack = memo(function TechStack() {
 
 /* 🚀 MAIN COMPONENT */
 function Scene3D() {
+  const skillGroups = [
+    {
+      title: "Frontend",
+      skills: ["HTML5", "CSS3", "JavaScript", "React", "Redux", "Hooks", "React Router", "Angular.Js" ],
+    },
+    {
+      title: "Backend",
+      skills: ["Node.js", "MySQL", "REST APIs", ".NET", "JWT", "NPM", "Appwrite", "PostgreSQL"],
+    },
+    {
+      title: "Tools & DevOps",
+      skills: ["Git", "GitHub", "Docker", "Postman", "Azure DevOps", "VS Code"],
+    },
+  ];
+
   return (
     <section
       id="Scene3D"
@@ -88,18 +104,12 @@ function Scene3D() {
       <div className="h-[400px] relative z-10 pointer-events-none">
         <Canvas
           camera={{ position: [0, 0, 6] }}
-          dpr={[1, 1.5]}                 // ✅ GPU safe
-          gl={{ preserveDrawingBuffer: true }} // ✅ prevents context loss
+          dpr={[1, 1.5]}
+          gl={{ preserveDrawingBuffer: true }}
         >
           <ambientLight intensity={1} />
-
-          {/* ✨ Stars */}
           <Stars radius={50} depth={50} count={800} factor={3} fade />
-
-          {/* 🚀 Tech Stack */}
           <TechStack />
-
-          {/* 🎯 Controls */}
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -109,41 +119,43 @@ function Scene3D() {
         </Canvas>
       </div>
 
-      {/* 🔻 Extra Content */}
-      <div className="mt-16 grid md:grid-cols-3 gap-8 px-6 md:px-20 relative z-10">
-        <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl">
-          <h3 className="text-[#c5a161] font-cormorant text-xl mb-2">
-            Frontend
-          </h3>
-          <p className="text-[#e8dcc8]/60 text-sm">
-            Building responsive, interactive UIs using React, Tailwind CSS,
-            and modern JavaScript frameworks.
-          </p>
-        </div>
+      {/* 🧠 Skill Boxes (REPLACED CORRECTLY) */}
+      <div className="grid md:grid-cols-3 gap-10 px-6 md:px-20 mt-16 relative z-10">
+        {skillGroups.map((group, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            className="p-8 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 className="text-[#c5a161] font-cormorant text-2xl mb-6">
+              {group.title}
+            </h3>
 
-        <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl">
-          <h3 className="text-[#c5a161] font-cormorant text-xl mb-2">
-            Backend
-          </h3>
-          <p className="text-[#e8dcc8]/60 text-sm">
-            Developing scalable APIs and server-side logic using Node.js,
-            Express, and database technologies.
-          </p>
-        </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {group.skills.map((skill, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 text-xs tracking-wide uppercase text-[#e8dcc8] border border-[#c5a161]/30 rounded-lg bg-[#0a0a0a]/60 hover:bg-[#c5a161]/10 hover:text-white hover:scale-105 transition-all duration-300"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
-        <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl">
-          <h3 className="text-[#c5a161] font-cormorant text-xl mb-2">
-            Tools & DevOps
-          </h3>
-          <p className="text-[#e8dcc8]/60 text-sm">
-            Version control, deployment pipelines, and modern tooling to
-            ensure efficient and reliable workflows.
-          </p>
-        </div>
+      {/* 🚀 Tagline (FROM SKILLS) */}
+      <div className="mt-20 text-center max-w-2xl mx-auto relative z-10 px-6">
+        <p className="text-[#e8dcc8]/60 font-jost text-sm tracking-wide">
+          Continuously learning and adapting to new technologies to stay ahead
+          in the ever-evolving world of software development.
+        </p>
       </div>
     </section>
   );
 }
 
-/* ✅ Prevent re-render */
 export default memo(Scene3D);
