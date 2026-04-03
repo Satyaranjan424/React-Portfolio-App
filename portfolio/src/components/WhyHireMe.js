@@ -5,27 +5,27 @@ export default function WhyHireMe() {
   const points = [
     {
       title: "Problem Solver",
-      desc: "I focus on solving real-world problems, not just writing code. I break down complex challenges into scalable solutions.",
+      desc: "I dig into the root of every challenge before writing a single line of code — turning complex requirements into clean, scalable architecture.",
     },
     {
       title: "Clean & Scalable Code",
-      desc: "I write maintainable, well-structured code that follows best practices and is easy to scale.",
+      desc: "Every component I write is structured for the long run — readable, modular, and built to scale without becoming technical debt.",
     },
     {
       title: "Fast Learner",
-      desc: "I quickly adapt to new technologies and tools, ensuring I stay relevant in fast-changing environments.",
+      desc: "I've picked up new frameworks, tools, and paradigms on the fly throughout my career — and I treat every new stack as an opportunity, not an obstacle.",
     },
     {
       title: "Performance Focused",
-      desc: "I build optimized applications with performance, responsiveness, and user experience in mind.",
+      desc: "From lazy loading to optimized queries, I think about speed and efficiency at every layer — frontend, backend, and everything in between.",
     },
     {
       title: "Team Collaboration",
-      desc: "I communicate effectively and work well in teams, ensuring smooth collaboration and project success.",
+      desc: "I thrive in cross-functional teams. Clear communication, timely updates, and a no-blame culture are things I actively bring to every project.",
     },
     {
       title: "Ownership Mindset",
-      desc: "I take responsibility for my work and ensure high-quality delivery from start to finish.",
+      desc: "I treat every feature like it's my product. From planning to deployment, I take full accountability for quality, deadlines, and outcomes.",
     },
   ];
 
@@ -42,9 +42,9 @@ export default function WhyHireMe() {
           Why Hire Me?
         </h2>
         <p className="text-[#e8dcc8]/60 max-w-2xl mx-auto font-jost text-sm tracking-wide leading-relaxed">
-          I don’t just build applications — I deliver scalable solutions that
-          create real impact. With a strong foundation and a growth mindset,
-          I bring both technical expertise and business value.
+          I don't just ship features — I take ownership of outcomes. As a Full
+          Stack Developer, I bring end-to-end thinking, a bias for clean
+          execution, and the drive to make every product better than I found it.
         </p>
       </div>
 
@@ -73,8 +73,8 @@ export default function WhyHireMe() {
       {/* 🚀 Bottom Statement */}
       <div className="mt-20 text-center max-w-2xl mx-auto px-6 relative z-10">
         <p className="text-[#e8dcc8]/60 font-jost text-sm tracking-wide">
-          Ready to contribute, learn, and grow while delivering impactful
-          solutions from day one.
+          Not just another developer on the team — someone who cares about
+          the product, the people, and the craft behind every line of code.
         </p>
       </div>
 

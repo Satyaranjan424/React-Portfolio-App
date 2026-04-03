@@ -10,30 +10,46 @@ import GithubStats from "./components/GithubStats";
 import WhyHireMe from "./components/WhyHireMe";
 import Contact from "./components/Contact";
 // import Chatbot from "./components/Chatbot";
+import GoldToggle from "./components/GoldToggle";
+import ButterflyEffect from "./components/ButterflyEffect";
+import Education from "./components/Education";
+import Courses from "./components/Courses";
+import "./styles/goldTheme.css";
 
 export default function App() {
   const [entered, setEntered] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [showButterfly, setShowButterfly] = useState(false);
+  const [triggerEffect, setTriggerEffect] = useState(false);
 
   return (
     <div onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}>
 
-<div className="cursor-glow" style={{ left: pos.x, top: pos.y }} />
-      <div className="spotlight" style={{ left: pos.x, top: pos.y }} />
+    <div className="cursor-glow" style={{ left: pos.x, top: pos.y }} />
+    <div className="spotlight" style={{ left: pos.x, top: pos.y }} />
 
       {!entered ? (
         <IntroGate onEnter={() => setEntered(true)} />
       ) : (
         <>
+          <GoldToggle
+          onToggle={() => {
+            setShowButterfly((prev) => !prev);
+            setTriggerEffect((prev) => !prev); // toggle ON/OFF
+          }}
+        />
+          <ButterflyEffect active={triggerEffect} />
           <Navbar />
           <Hero3D />
-          <Scene3D />
-          {/* <Skills /> */}
           <WhyHireMe />
+          <Scene3D />
           <Projects />
           <Experience/>
+          <Education/>
+          <Courses/>
           <GithubStats />
           <Contact />
+          {/* <Skills /> */}
           {/* <Chatbot /> */}
         </>
       )}

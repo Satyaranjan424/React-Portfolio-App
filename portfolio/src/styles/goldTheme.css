@@ -1,0 +1,105 @@
+/* =========================================
+   🔘 TOGGLE BUTTON
+========================================= */
+.gold-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gold-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffd166;
+}
+
+.toggle-btn {
+  width: 55px;
+  height: 28px;
+  border-radius: 50px;
+  background: #2c2c2c;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #ffb703, #ffd166);
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.active .toggle-circle {
+  transform: translateX(26px);
+}
+
+/* =========================================
+   🦋 LIVE BUTTERFLY (FINAL PRO VERSION)
+========================================= */
+.butterfly-live {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+
+  /* performance optimization */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+
+  /* smooth glow transition */
+  transition: filter 0.3s ease;
+}
+
+.butterfly-live img {
+  width: 120px; /* balanced size (not too big) */
+  transform-origin: center;
+
+  /* smoother scaling */
+  transition: transform 0.2s ease;
+
+  /* wing animation */
+  animation: butterflyFlap 0.4s infinite alternate ease-in-out;
+
+  /* softer premium glow */
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+}
+
+/* 🦋 wing motion */
+@keyframes butterflyFlap {
+  from {
+    transform: rotate(-5deg) scale(1);
+  }
+  to {
+    transform: rotate(5deg) scale(1.04);
+  }
+}
+
+/* =========================================
+   ✨ PARTICLE TRAIL (OPTIONAL FUTURE USE)
+========================================= */
+.butterfly-particle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.9;
+
+  background: radial-gradient(circle, gold, transparent);
+}
