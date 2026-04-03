@@ -19,7 +19,7 @@ import "./styles/goldTheme.css";
 export default function App() {
   const [entered, setEntered] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [showButterfly, setShowButterfly] = useState(false);
+  const [, setShowButterfly] = useState(false);
   const [triggerEffect, setTriggerEffect] = useState(false);
 
   return (
