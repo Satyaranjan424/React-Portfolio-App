@@ -30,6 +30,7 @@ export default function ButterflyEffect({ active }) {
       { id: "contact", weight: 0.05 },
       { id: "education", weight: 0.02},
       { id: "experience", weight: 0.1},
+      { id: "footer", weight: 0.05},
     ];
 
     const handleScroll = () => {

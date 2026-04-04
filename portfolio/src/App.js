@@ -9,12 +9,13 @@ import Experience from "./components/Experience";
 import GithubStats from "./components/GithubStats";
 import WhyHireMe from "./components/WhyHireMe";
 import Contact from "./components/Contact";
-// import Chatbot from "./components/Chatbot";
 import GoldToggle from "./components/GoldToggle";
 import ButterflyEffect from "./components/ButterflyEffect";
 import Education from "./components/Education";
 import Courses from "./components/Courses";
+import Footer from "./components/Footer";
 import "./styles/goldTheme.css";
+// import Chatbot from "./components/Chatbot";
 
 export default function App() {
   const [entered, setEntered] = useState(false);
@@ -49,6 +50,7 @@ export default function App() {
           <Courses/>
           <GithubStats />
           <Contact />
+          <Footer/>
           {/* <Skills /> */}
           {/* <Chatbot /> */}
         </>

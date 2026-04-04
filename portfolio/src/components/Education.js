@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const educationData = [
   {
     degree: "B.Tech in Computer Science & Engineering",
-    institution: "Siksha O Anusandhan University",
+    institution: "Siksha 'O' Anusandhan University",
     duration: "2020 – 2024",
     score: "CGPA: 7.5 / 10",
     desc: "Specialized in software engineering, algorithms, networking, and full-stack development. Built a strong foundation in both theoretical CS and practical application development.",
