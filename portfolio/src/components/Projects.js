@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
+      title: "SRD Social Platform App",
+      desc: "A full-stack social networking app enabling users to create profiles, post updates, & engage in real-time discussions. Integrated with authentication, database management, and cloud functions, deployed for seamless performance and scalability.",
+      tech: ["React", "Node.js", "Tailwind CSS", "Appwrite"],
+      github: "https://github.com/Satyaranjan424/React-App-Project",
+      live: "https://srd-social-platform.vercel.app/",
+    },
+    {
       title: "Property Management System",
-      desc: "A full-stack platform to manage properties, tenants, and lease cycles — featuring role-based access, automated payment tracking, and a responsive dashboard built for property owners and managers.",
+      desc: "A full-stack platform to manage properties, tenants, and lease cycles — featuring role-based access, automated payment tracking, and a responsive dashboard built for property owners, managers and customers satisfaction.",
       tech: ["React", "Node.js", "Express", "PostgreSQL"],
       github: "https://github.com/Satyaranjan424",
       live: "#",
     },
     {
-      title: "Restaurant Management System",
-      desc: "An end-to-end restaurant operations platform handling live order management, dynamic menu configuration, and table tracking — designed for speed, reliability, and a smooth staff experience.",
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/Satyaranjan424",
-      live: "#",
-    },
-    {
       title: "Job Board Application",
-      desc: "A full-featured job portal with advanced filtering, role-based profiles for recruiters and applicants, and a clean UI backed by efficient REST API integration for real-time job listings.",
+      desc: "A full-featured job portal with advanced filtering, role-based profiles for recruiters and applicants, and a clean UI backed by efficient REST API integration for real-time job listings and smooth experience for students in job findings.",
       tech: ["React", "Redux", "REST API"],
       github: "https://github.com/Satyaranjan424",
       live: "#",
