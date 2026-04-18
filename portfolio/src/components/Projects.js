@@ -3,26 +3,37 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
+    // {
+    //   title: "Job Board Application",
+    //   image: "/Images/WohaImg.png",
+    //   desc: "A full-featured job portal with advanced filtering, role-based profiles for recruiters and applicants, and a clean UI backed by efficient REST API integration for real-time job listings and smooth experience for students in job findings.",
+    //   tech: ["React", "Redux", "REST API"],
+    //   github: "https://github.com/Satyaranjan424",
+    //   live: "#",
+    // },
     {
-      title: "SRD Social Platform App",
-      desc: "A full-stack social networking app enabling users to create profiles, post updates, & engage in real-time discussions. Integrated with authentication, database management, and cloud functions, deployed for seamless performance and scalability.",
+      title: "Face Of Woha _ Women Empowerment",
+      image: "/Images/WohaImg.png",
+      desc: "A women empowerment platform built for an international client, celebrating stories and voices of women globally. Designed with elegant UI, visually rich layout with smooth interactions, and responsive design — a proud milestone from my time at Appman that defines my frontend growth.",
+      tech: ["HTML5", "CSS3", "JavaScript", ".NET"],
+      github: "https://github.com/Satyaranjan424",
+      live: "https://woha.appman.in/",
+    },
+    {
+      title: "Bondly _ Travel Discovery Platform",
+      image: "/Images/BondlyImg.png",
+      desc: "A full-stack travel platform where users create profiles, save visited places, and share travel stories with the community. Google Maps and Weather APIs for real-time destination insights. Features rich modules including trip planning, expense tracking, and photo galleries for an end-to-end experience.",
+      tech: ["React", "Node", "Rest API", "PgSQL", "Redis"],
+      github: "https://github.com/Satyaranjan424/Bondly--Travel-Discovery-Platform",
+      live: "https://bondly-travel-discovery-platform.vercel.app/",
+    },
+    {
+      title: "SRD _ Social Platform App",
+      image: "/Images/SRDImg.png",
+      desc: "A full-stack social networking app enabling users to create profiles, post updates, edit or delete posts & engage in real-time discussions. Integrated with authentication, database management, and cloud functions, deployed for seamless performance and scalability.",
       tech: ["React", "Node.js", "Tailwind CSS", "Appwrite"],
       github: "https://github.com/Satyaranjan424/React-App-Project",
       live: "https://srd-social-platform.vercel.app/",
-    },
-    {
-      title: "Property Management System",
-      desc: "A full-stack platform to manage properties, tenants, and lease cycles — featuring role-based access, automated payment tracking, and a responsive dashboard built for property owners, managers and customers satisfaction.",
-      tech: ["React", "Node.js", "Express", "PostgreSQL"],
-      github: "https://github.com/Satyaranjan424",
-      live: "#",
-    },
-    {
-      title: "Job Board Application",
-      desc: "A full-featured job portal with advanced filtering, role-based profiles for recruiters and applicants, and a clean UI backed by efficient REST API integration for real-time job listings and smooth experience for students in job findings.",
-      tech: ["React", "Redux", "REST API"],
-      github: "https://github.com/Satyaranjan424",
-      live: "#",
     },
   ];
 
@@ -59,6 +70,13 @@ export default function Projects() {
             transition={{ delay: index * 0.2 }}
             className="group p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-3 hover:border-[#c5a161]/40 transition-all duration-300"
           >
+            <div className="w-full rounded-2xl h-48 overflow-hidden mb-3">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
 
             {/* Title */}
             <h3 className="text-[#c5a161] font-cormorant text-xl mb-3">
