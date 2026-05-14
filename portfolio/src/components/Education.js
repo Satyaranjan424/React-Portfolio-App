@@ -70,7 +70,7 @@ export default function Education() {
             <div className="hidden md:block absolute left-1/2 top-6 w-4 h-4 -translate-x-1/2 rounded-full bg-[#c5a161] shadow-[0_0_14px_#c5a161] z-10" />
 
             <div className="w-full md:w-[46%]">
-              <div className="group p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-2 hover:border-[#c5a161]/40 transition-all duration-300">
+              <div className="group p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-2 hover:bg-[#c5a161]/10 hover:border-[#c5a161]/45 hover:shadow-[0_20px_55px_rgba(197,161,97,0.14)] transition-all duration-300">
 
                 {/* Top row */}
                 <div className="flex items-start justify-between gap-3 mb-3">

@@ -3,14 +3,6 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
-    // {
-    //   title: "Job Board Application",
-    //   image: "/Images/WohaImg.png",
-    //   desc: "A full-featured job portal with advanced filtering, role-based profiles for recruiters and applicants, and a clean UI backed by efficient REST API integration for real-time job listings and smooth experience for students in job findings.",
-    //   tech: ["React", "Redux", "REST API"],
-    //   github: "https://github.com/Satyaranjan424",
-    //   live: "#",
-    // },
     {
       title: "Face Of Woha _ Women Empowerment",
       image: "/Images/WohaImg.png",
@@ -26,6 +18,14 @@ export default function Projects() {
       tech: ["React", "Node", "Rest API", "PgSQL", "Redis"],
       github: "https://github.com/Satyaranjan424/Bondly--Travel-Discovery-Platform",
       live: "https://bondly-travel-discovery-platform.vercel.app/",
+    },
+    {
+      title: "Learnova _ Smart Learnig Platform",
+      image: "/Images/LearnovaImg.png",
+      desc: "A production-ready e-learning platform with role-based dashboards for students, instructors, and admins, featuring course management, coding challenges, quizzes, progress tracking, and secure full-stack integration for modern learning experiences.",
+      tech: ["React", "Node", "Express", "API", "PgSQL"],
+      github: "https://github.com/Satyaranjan424/Learnova-Smart-E-Learning-Platform",
+      live: "https://learnova-smart-e-learning-platform.vercel.app/",
     },
     {
       title: "SRD _ Social Platform App",
@@ -46,6 +46,7 @@ export default function Projects() {
       {/* 🌌 Background Glow */}
       <div className="absolute w-[400px] h-[400px] bg-indigo-500/20 blur-[120px] top-0 left-0" />
       <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-[120px] bottom-0 right-0" />
+      <div className="absolute inset-x-0 top-1/3 h-40 bg-gradient-to-r from-cyan-400/10 via-fuchsia-500/10 to-amber-300/10 blur-3xl" />
 
       {/* 👑 Heading */}
       <div className="text-center mb-16 relative z-10">
@@ -68,14 +69,21 @@ export default function Projects() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
-            className="group p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-3 hover:border-[#c5a161]/40 transition-all duration-300"
+            className="project-glass-card group p-6 rounded-2xl transition-all duration-300"
           >
-            <div className="w-full rounded-2xl h-48 overflow-hidden mb-3">
+            <div className="relative w-full rounded-2xl h-48 overflow-hidden mb-3">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80" />
+              <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span className="rounded-full border border-cyan-300/20 bg-black/40 px-3 py-1 font-jost text-[0.65rem] uppercase tracking-[0.24em] text-cyan-100/80 backdrop-blur-md">
+                  Case Study
+                </span>
+                <span className="h-2 w-2 rounded-full bg-[#67e8f9] shadow-[0_0_18px_rgba(103,232,249,0.9)]" />
+              </div>
             </div>
 
             {/* Title */}
@@ -93,7 +101,7 @@ export default function Projects() {
               {project.tech.map((tech, i) => (
                 <span
                   key={i}
-                  className="text-xs px-3 py-1 border border-[#c5a161]/30 rounded-md text-[#e8dcc8] bg-[#0a0a0a]/60"
+                  className="text-xs px-3 py-1 border border-[#c5a161]/30 rounded-md text-[#e8dcc8] bg-[#0a0a0a]/60 tech-chip"
                 >
                   {tech}
                 </span>
@@ -115,7 +123,7 @@ export default function Projects() {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-widest px-4 py-2 rounded-lg bg-gradient-to-r from-[#c5a161] to-[#e8d5a3] text-black hover:scale-105 transition"
+                className="text-xs uppercase tracking-widest px-4 py-2 rounded-lg bg-gradient-to-r from-[#c5a161] via-[#e8d5a3] to-[#67e8f9] text-black hover:scale-105 transition"
               >
                 Live Demo
               </a>

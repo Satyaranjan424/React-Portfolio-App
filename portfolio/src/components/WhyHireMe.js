@@ -57,7 +57,7 @@ export default function WhyHireMe() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-2 hover:border-[#c5a161]/40 transition-all duration-300"
+            className="p-6 rounded-2xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-2 hover:scale-[1.02] hover:border-[#c5a161]/40 transition-all duration-300"
           >
             <h3 className="text-[#c5a161] font-cormorant text-xl mb-3">
               {item.title}

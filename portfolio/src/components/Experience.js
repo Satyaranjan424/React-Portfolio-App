@@ -85,7 +85,7 @@ export default function Experience() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
-            className="text-center p-4 rounded-xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl"
+            className="text-center p-4 rounded-xl border border-[#c5a161]/20 bg-white/5 backdrop-blur-xl hover:-translate-y-1 hover:bg-[#c5a161]/10 hover:border-[#c5a161]/45 hover:shadow-[0_18px_45px_rgba(197,161,97,0.12)] transition-all duration-300"
           >
             <p className="font-cormorant text-3xl text-[#c5a161] mb-1">
               {stat.value}
@@ -126,7 +126,7 @@ export default function Experience() {
             }`}
           >
             <div className="w-full md:w-[45%]">
-              <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl hover:scale-105 transition-all duration-300 shadow-lg">
+              <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl hover:scale-105 hover:bg-[#c5a161]/10 hover:border-[#c5a161]/45 hover:shadow-[0_20px_55px_rgba(197,161,97,0.14)] transition-all duration-300 shadow-lg">
 
                 {/* Role */}
                 <h3 className="text-[#c5a161] font-cormorant text-xl mb-1">
