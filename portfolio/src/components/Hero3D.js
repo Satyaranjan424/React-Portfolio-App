@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const ROLES = ["Full Stack Developer", "React Architect", "Node.js Engineer", "UI / UX Craftsman"];
 const STATS = [
   { value: 10, suffix: "+", label: "Projects" },
-  { value: 1, suffix: "y+", label: "Experience" },
+  { value: 2, suffix: "y+", label: "Experience" },
   { value: 99, suffix: "%", label: "Satisfaction" },
 ];
 

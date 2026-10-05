@@ -52,9 +52,9 @@ const experiences = [
 ];
 
 const stats = [
-  { value: "1+", label: "Year of Experience" },
+  { value: "2+", label: "Year of Experience" },
   { value: "10+", label: "Projects Delivered" },
-  { value: "2", label: "Roles at Appman" },
+  { value: "1", label: "Roles at Kalpanaaa" },
   { value: "Full Stack", label: "Specialisation" },
 ];
 
