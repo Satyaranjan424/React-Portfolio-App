@@ -5,9 +5,21 @@ import { useRef } from "react";
 
 const experiences = [
   {
+    role: "Software Engineer/Tech Lead",
+    company: "Kalpanaaa Software Solutions Pvt. Ltd.",
+    duration: "07/2026 – Present",
+    location: "Bengaluru, Karnataka, India",
+    points: [
+      "Leading technical development across multiple software projects, guiding frontend, backend, UI/UX, and testing teams.",
+      "Defining technical approaches, system architecture, technology choices, API integrations, and database solutions.",
+      "Reviewing development progress and code quality while guiding developers on engineering practices and technical problem-solving.",
+      "Contributing to full-stack development and leveraging modern AI-assisted development tools to accelerate prototyping, development, and delivery.",
+    ],
+  },
+  {
     role: "Software Engineer",
     company: "Appman Technologies Pvt. Ltd.",
-    duration: "05/2025 – Present",
+    duration: "05/2025 – 07/2026",
     location: "Bhubaneswar, Odisha, India",
     points: [
       "Designed and delivered enterprise-grade web applications using React, HTML5, CSS3, and JavaScript — ensuring cross-browser compatibility, responsive layouts, and smooth user experiences.",
@@ -121,9 +133,8 @@ export default function Experience() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className={`mb-12 flex ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            }`}
+            className={`mb-12 flex ${index % 2 === 0 ? "justify-start" : "justify-end"
+              }`}
           >
             <div className="w-full md:w-[45%]">
               <div className="p-6 border border-[#c5a161]/20 rounded-xl bg-white/5 backdrop-blur-xl hover:scale-105 hover:bg-[#c5a161]/10 hover:border-[#c5a161]/45 hover:shadow-[0_20px_55px_rgba(197,161,97,0.14)] transition-all duration-300 shadow-lg">
